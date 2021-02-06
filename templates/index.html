@@ -1,0 +1,53 @@
+<!--
+ * @Author: Resunoon
+ * @Date: 2020-10-21 18:26:28
+ * @LastEditTime: 2020-12-02 18:49:13
+ * @LastEditors: Resunoon
+ * @Description: 最后写亿行
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>校车管理系统</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='bootstrap/css/bootstrap.min.css') }}" />
+  <style>
+    .label:empty {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    {% include 'head.html' %}
+
+    <div class="row justify-content-center">
+      <img src="https://api.pwmqr.com/qrcode/create/?url={{secretcode}}" />
+    </div>
+    <div class="row justify-content-center">
+      余额:{{money}}
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <a class="row justify-content-center" href="/charge">
+      <button class="btn btn-block btn-large btn-success mb-4" type="button">在线充值</button>
+    </a>
+  </div>
+  {% for broad in cast %}
+  <div class="row justify-content-center">
+    <div class="col-lg-4 col-10">
+      <div class="alert alert-info">
+        <h4>
+          {{broad[1]}}
+        </h4>{{broad[2]}}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</body>
+
+</html>

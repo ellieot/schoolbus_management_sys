@@ -1,0 +1,56 @@
+<!--
+ * @Author: Resunoon
+ * @Date: 2020-10-21 18:26:28
+ * @LastEditTime: 2020-12-02 13:33:26
+ * @LastEditors: Resunoon
+ * @Description: 最后写亿行
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>校车管理系统</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='bootstrap/css/bootstrap.min.css') }}" />
+    <style>
+        .label:empty {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        {% include 'head.html' %}
+        <div class="row justify-content-center">
+            <img src="https://api.pwmqr.com/qrcode/create/?url={{secretcode}}" />
+        </div>
+        <div class="row justify-content-center">
+            <form action="/scan" method="POST">
+                <input type="hidden" name="secretcode" value="{{secretcode}}">
+                <input type="submit" value="扫码">
+            </form>
+        </div>
+        <div class="row justify-content-center">
+            余额:{{money}}
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <a class="row justify-content-center" href="/charge">
+            <button class="btn btn-block btn-large btn-danger" type="button">在线充值</button>
+        </a>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-6">
+            <div class="alert alert-info">
+                <h4>
+                    公告
+                </h4>同学们记得一次交完四年暖气费
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

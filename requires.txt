@@ -1,0 +1,6 @@
+pymysql
+psutil
+flask
+execjs
+requests
+bs4

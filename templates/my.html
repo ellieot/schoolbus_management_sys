@@ -1,0 +1,38 @@
+<!--
+ * @Author: Resunoon
+ * @Date: 2020-11-29 23:08:05
+ * @LastEditTime: 2020-12-02 19:31:36
+ * @LastEditors: Resunoon
+ * @Description: 最后写亿行
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>校车管理系统</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='bootstrap/css/bootstrap.min.css') }}" />
+</head>
+
+<body>
+    <div class="container-fluid">
+        {% include 'head.html' %}
+
+        <div class="row justify-content-center">
+            <a href="/chargehistory" class="col-6 col-lg-3 mt-2"><button class="btn btn-block btn-large btn-info"
+                    type="button">充值记录</button></a>
+        </div>
+        <div class="row justify-content-center">
+            <a href="/takehistory" class="col-6 col-lg-3 mt-2"><button class="btn btn-block btn-large btn-info"
+                    type="button">乘车记录</button></a>
+        </div>
+        <HR class="col-6 col-lg-3" style="FILTER: alpha(opacity=100,finishopacity=0,style=2)" width="80%" color=#987cb9
+            SIZE=10>
+        <div class="row justify-content-center">
+            <a href="/logout" class="col-6 col-lg-3"><button class="btn btn-block btn-large btn-danger"
+                    type="button">退出登录</button></a>
+        </div>
+    </div>
+</body>

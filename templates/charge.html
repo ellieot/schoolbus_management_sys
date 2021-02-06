@@ -1,0 +1,46 @@
+<!--
+ * @Author: Resunoon
+ * @Date: 2020-10-21 18:26:28
+ * @LastEditTime: 2020-11-27 18:47:20
+ * @LastEditors: Resunoon
+ * @Description: 最后写亿行
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>校车管理系统</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='bootstrap/css/bootstrap.min.css') }}" />
+  <style>
+    .btn {
+      padding-top: 10px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- 导航 -->
+    {% include 'head.html' %}
+    <!-- 二维码 -->
+    <div class="row justify-content-center">
+      <form action="/charging" method="post">
+        <div class="row justify-content-center">
+          <h4>充值金额</h4>
+        </div>
+        <div class="row justify-content-center">
+          <label>￥</label>
+          <input type="text" name="amount">
+        </div>
+        <div class="row justify-content-center">
+          <input type="submit" value="充值" class="btn btn-primary submit-amount">
+        </div>
+      </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!--
+ * @Author: Resunoon
+ * @Date: 2020-12-02 15:39:40
+ * @LastEditTime: 2020-12-02 16:04:03
+ * @LastEditors: Resunoon
+ * @Description: 最后写亿行
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理页面</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='bootstrap/css/bootstrap.min.css') }}" />
+</head>
+
+<body>
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>订单号</th>
+                    <th>日期</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% include 'adminhead.html' %}
+                <div class="row justify-content-center">
+                    {% for order in orders %}
+                    <tr>
+                        <th>{{loop.index}}</th>
+                        <td>{{order[0]}}</td>
+                        <td>{{order[1]}}</td>
+                    </tr>
+                    {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    </div>
+</body>

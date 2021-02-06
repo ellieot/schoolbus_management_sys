@@ -1,0 +1,41 @@
+<!--
+ * @Author: Resunoon
+ * @Date: 2020-11-15 22:29:33
+ * @LastEditTime: 2020-11-16 07:17:28
+ * @LastEditors: Resunoon
+ * @Description: 最后写亿行
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校车运行界面</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='bootstrap/css/bootstrap.min.css') }}" />
+
+</head>
+
+<body>
+    <div class="container">
+        {% include 'head.html' %}
+    </div>
+
+    <div class="row justify-content-center">
+        <iframe id="iframepage" src="http://www.ns-res.cn/hydxflat/indexelct1.html" frameborder="1px"
+            onload="change()"></iframe>
+    </div>
+    </div>
+</body>
+<script>
+    function change() {
+        var ifm = document.getElementById("iframepage");
+        ifm.height = document.documentElement.clientHeight;
+        ifm.width = document.documentElement.clientWidth;
+    }
+    window.onresize = function () {
+        change();
+    }
+</script>
+
+</html>

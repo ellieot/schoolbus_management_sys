@@ -1,0 +1,71 @@
+<!--
+ * @Author: Resunoon
+ * @Date: 2020-10-08 19:43:10
+ * @LastEditTime: 2020-12-01 22:33:59
+ * @LastEditors: Resunoon
+ * @Description: 最后写亿行
+-->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>校车管理系统</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='bootstrap/css/bootstrap.min.css') }}" />
+
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background: url(pic/background.png) no-repeat center 0px;
+			background-size: cover;
+
+			background-position: center 0;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			-webkit-background-size: cover;
+			-o-background-size: cover;
+			-moz-background-size: cover;
+			-ms-background-size: cover;
+		}
+	</style>
+
+</head>
+
+<body onselectstart="return false;" id="body">
+	<div class="container justify-content-center">
+		<div class="row justify-content-center">
+			<img src="pic\logo.png" height="100px">
+		</div>
+		<h3 class="text-center">
+			<tt><strong>信大E行</strong></tt>
+		</h3>
+		<form role="form" method="POST" action="/">
+			<div class="form-group">
+				<label for="username">学号</label>
+				<input type="text" class="form-control" id="username" name="username">
+			</div>
+			<div class="form-group">
+				<label for="password">密码 </label>
+				<a
+					href="http://authserver.nuist.edu.cn/retrieve-password/retrievePassword/index.html#/?service=http%3A%2F%2Fmy.nuist.edu.cn%2F">忘记密码</a>
+				<input type="password" class="form-control" id="password" name="password">
+			</div>
+			<div class="checkbox">
+				<label><input type="checkbox" name="rememberme">自动登录</label>
+			</div>
+			<button type="submit" class="btn btn-primary" onclick="unbind()">
+				提交
+			</button>
+
+		</form>
+
+		<script src="{{ url_for('static',filename='bootstrap/js/jquery.js') }}"></script>
+		<script src="{{ url_for('static',filename='bootstrap/js/bootstrap.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='bootstrap/js/scripts.js') }}"></script>
+</body>
+
+</html>

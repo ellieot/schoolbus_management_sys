@@ -1,0 +1,46 @@
+<!--
+ * @Author: Resunoon
+ * @Date: 2020-12-02 17:36:10
+ * @LastEditTime: 2020-12-02 18:18:20
+ * @LastEditors: Resunoon
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理页面</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='bootstrap/css/bootstrap.min.css') }}" />
+</head>
+
+<body>
+    <div class="container">
+        {% include 'adminhead.html' %}
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>标题</th>
+                    <th>内容</th>
+                    <th>日期</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for cast in broad %}
+                <tr>
+                    <td>{{cast[0]}}</td>
+                    <td>{{cast[1]}}</td>
+                    <td>{{cast[2]}}</td>
+                    <td>{{cast[3]}}</td>
+                </tr>
+                {% endfor %}
+                <tr align="center">
+                    <td colspan="4"><a href="/addbroadcast"><button class="btn btn-primary">发布新公告</button></a></td>
+                </tr>
+                </form>
+            </tbody>
+        </table>
+    </div>
+</body>
